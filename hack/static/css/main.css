@@ -32,6 +32,11 @@ html::before
     margin-left:480px;
     width:1300px;
 }
+#red
+{
+    color:#ad1e1e;
+    font-size:80px;
+}
 #translate
 {
     clear:both;
@@ -46,6 +51,15 @@ html::before
 #translate>ul>li{
     display: inline-block;
     padding: 5px 20px 5px 10px;
+}
+button{
+    border:none;
+    background-color: transparent;
+    font-size: 30px;
+}
+button:hover
+{
+    color:#ad1e1e;
 }
 #line
 {
@@ -64,11 +78,19 @@ html::before
     padding:10px;
     box-shadow:50px 50px gray;
 }
+#des
+{
+    font-size: 20px;
+}
 table
 {
-    margin-top: -420px;
-    margin-left:1000px;
+    margin-top: -435px;
+    margin-left:1050px;
     float:left;
+}
+td
+{
+    padding:15px;
 }
 #menu
 {
@@ -77,7 +99,6 @@ table
     font-size: 30px;
     width:350px;
     background-color:#ad1e1e;
-    color:white;
     height:310px;
 }
 #menu>ul{
@@ -88,6 +109,10 @@ table
     padding-bottom:8px;
     border-bottom:1px solid white;
 }
-#menu>ul>li:hover{
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
     color:black;
 }
