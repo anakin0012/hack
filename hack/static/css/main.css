@@ -1,0 +1,93 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 1900px;
+    z-index:1;
+}
+html::before
+{
+    content: "";
+    width: 1900px;
+    height: 100%;
+    background-image: url("campus.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity:0.5;
+}
+#logo
+{
+    float:left;
+    margin-left:300px;
+    margin-top:-21px;
+}
+#welcome
+{
+    font-size: 70px;
+    margin-top:42px;
+    margin-left:480px;
+    width:1300px;
+}
+#translate
+{
+    clear:both;
+    margin-top:80px;
+    margin-left:730px;
+    font-size: 30px;
+    width:900px;
+}
+#translate>ul{
+    list-style-type: none;
+}
+#translate>ul>li{
+    display: inline-block;
+    padding: 5px 20px 5px 10px;
+}
+#line
+{
+    border-right: 3px solid black
+}
+#description
+{
+    font-size: 20px;
+    background-color: white;
+    width:500px;
+    border-radius:10px;
+    float:left;
+    margin-top: 90px;
+    margin-left:120px;
+    height:400px;
+    padding:10px;
+    box-shadow:50px 50px gray;
+}
+table
+{
+    margin-top: -420px;
+    margin-left:1000px;
+    float:left;
+}
+#menu
+{
+    float:left;
+    margin-top:130px;
+    font-size: 30px;
+    width:350px;
+    background-color:#ad1e1e;
+    color:white;
+    height:310px;
+}
+#menu>ul{
+    list-style-type: none;
+}
+#menu>ul>li{
+    padding-top:8px;
+    padding-bottom:8px;
+    border-bottom:1px solid white;
+}
+#menu>ul>li:hover{
+    color:black;
+}

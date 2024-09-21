@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <img id="logo" src="{% static 'images/KNU.png' %}" width="150" height="150">
+    <div id="welcome">Welcome To Korea No.1 University!</div>
+    <div id="translate">
+    <ul>
+        <li id="line">ENGLISH</li>
+        <li id="line">中國語</li>
+        <li>日本語</li>
+    </ul>
+    </div>
+    <div id="menu">
+        <ul>
+            <li>Medical Facilities</li>
+            <li>Restaurants</li>
+            <li>Life Guides</li>
+            <li>Announcements</li>
+        </ul>
+    </div>
+    <div id="description">
+        <h2>Welcome Global Students!</h2>
+        This website introduces about KNU fot those who are new to our university or from other countries.<br><br>
+        You could get infomation about medical facilities, restaurants, life guides, and official announcements.
+        <br><br>Feel free to watch our website and have a good campus life!
+    </div>
+    <table>
+        <tbody>
+            <tr>
+                <td><img src="{% static 'images/medical.png' %}" width="200" height="200"></td>
+                <td><img src="{% static 'images/rest.png' %}" width="200" height="200"></td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/guide.png' %}" width="200" height="200"></td>
+                <td><img src="{% static 'images/announcement.png' %}" width="200" height="200"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
