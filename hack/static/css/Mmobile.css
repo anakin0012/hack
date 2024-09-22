@@ -59,11 +59,18 @@ button{
 button:hover{
     color:#ad1e1e
 }
-
-footer {
+footer{
     margin-top: 30px;
     padding: 20px;
     background-color:  #333;
     color: white;
     text-align: center;
+}
+#home
+{
+    float: right;
+    color: white;
+    margin-top: -70px;
+    font-size: 30px;
+    margin-right: 10px;
 }
