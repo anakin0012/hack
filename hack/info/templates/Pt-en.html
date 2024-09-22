@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Transportation Guide - Daegu</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/Pt.css' %}">
+    <script>
+        function toen()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let m1 = document.getElementsByClassName("m1");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "Public Transportation Guide - Daegu";
+            h2[0].innerHTML = "1. Subway";
+            h2[1].innerHTML = "2. Bus";
+            h2[2].innerHTML = "3. Taxi";
+            h2[3].innerHTML = "4. Transfer Between Subway and Bus";
+            h2[4].innerHTML = "5. Recommended Apps";
+            m1[0].innerHTML = "<strong>Daegu Bus</strong>: Provides real-time bus arrival times and route maps.";
+            m1[1].innerHTML = "<strong>Subway Korea</strong>: Offers subway maps and real-time updates for Daegu's subway system.";
+            m1[2].innerHTML = "<strong>Kakao T</strong>: A popular app for calling taxis and checking public transportation routes.";
+            p[0].innerHTML = "Daegu has a well-connected subway system with three lines (Line 1, Line 2, and Line 3). You can buy a transportation card (T-money) at any subway station or convenience store, which can be used for subways, buses, and taxis. The subway operates from approximately 5:30 AM to midnight.";
+            p[1].innerHTML = "Daegu's bus system covers a wide range of routes. Buses are color-coded based on their routes: green, red, yellow, and blue. You can use your T-money card on buses as well. Bus stops have route maps, and you can check bus arrival times via mobile apps such as 'Daegu Bus'.";
+            p[2].innerHTML = "Taxis in Daegu are readily available and can be hailed on the street or through mobile apps. Most taxis accept T-money cards or cash. While taxi drivers may not always speak English, having your destination written in Korean can be very helpful.";
+            p[3].innerHTML = "In Daegu, you can transfer between the subway and bus for free within 30 minutes of tapping out at a subway station or bus stop (up to four transfers). Simply use the same T-money card for both services. Transfers must occur between the same modes of transportation (subway-bus or bus-bus).";
+            p[4].innerHTML = "We recommend downloading the following apps to help with navigating Daegu's public transportation:";
+            option[0].innerHTML = "1. Bank Account Opening";
+            option[1].innerHTML = "2. Mobile Service Guide";
+            option[2].innerHTML = "3. Waste Separation Guide";
+        }
+        function tochn()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let m1 = document.getElementsByClassName("m1");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "公共交通指南 - 大邱";
+            h2[0].innerHTML = "1. 地铁";
+            h2[1].innerHTML = "2. 公交车";
+            h2[2].innerHTML = "3. 出租车";
+            h2[3].innerHTML = "4. 地铁与公交车之间的换乘";
+            h2[4].innerHTML = "5. 推荐的应用程序";
+            m1[0].innerHTML = "<strong>Daegu Bus</strong>：提供公交车的实时到达时间和路线图。";
+            m1[1].innerHTML = "<strong>Subway Korea</strong>：提供大邱地铁的地图和实时更新。";
+            m1[2].innerHTML = "<strong>Kakao T</strong>：一款流行的应用程序，用于叫出租车并查看公共交通路线。";
+            p[0].innerHTML = "大邱有三条地铁线路（1号线，2号线和3号线）。您可以在任何地铁站或便利店购买交通卡（T-money），该卡可用于地铁，公交车和出租车。地铁运营时间为大约早上5:30至午夜。";
+            p[1].innerHTML = "大邱的公交系统覆盖范围广泛。公交车按路线进行颜色分类：绿色，红色，黄色和蓝色。您也可以使用T-money卡支付车费。公交车站设有路线图，您可以通过移动应用程序（如“Daegu Bus”）查看公交车的实时到达时间。";
+            p[2].innerHTML = "大邱的出租车随处可见，您可以在街上叫车或通过移动应用程序叫车。大多数出租车接受T-money卡或现金。由于并非所有司机都会说英语，因此提前准备好目的地的韩文书写非常有帮助。";
+            p[3].innerHTML = "在大邱，您可以在地铁站或公交站刷卡后30分钟内免费换乘地铁或公交车（最多四次换乘）。换乘时，请使用同一张T-money卡。换乘必须在相同的交通模式之间进行（地铁-公交车或公交车-公交车）。";
+            p[4].innerHTML = "我们建议下载以下应用程序来帮助您更好地使用大邱的公共交通：";
+            option[0].innerHTML = "1. 银行账户开设";
+            option[1].innerHTML = "2. 手机服务指南";
+            option[2].innerHTML = "3. 垃圾分类指南";
+        }
+        function tojp()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let m1 = document.getElementsByClassName("m1");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "公共交通ガイド - 大邱";
+            h2[0].innerHTML = "1. 地下鉄";
+            h2[1].innerHTML = "2. バス";
+            h2[2].innerHTML = "3. タクシー";
+            h2[3].innerHTML = "4. 地下鉄とバスの乗り換え";
+            h2[4].innerHTML = "5. おすすめアプリ";
+            m1[0].innerHTML = "<strong>Daegu Bus</strong>：バスの到着時間や路線図をリアルタイムで提供します。";
+            m1[1].innerHTML = "<strong>Subway Korea</strong>：大邱地下鉄の地図とリアルタイムの更新を提供します。";
+            m1[2].innerHTML = "<strong>Kakao T</strong>：タクシーを呼んだり、公共交通機関のルートを確認したりできる人気のアプリです。";
+            p[0].innerHTML = "大邱には3つの地下鉄路線（1号線、2号線、3号線）があります。交通カード（T-money）は、地下鉄駅やコンビニエンスストアで購入でき、地下鉄、バス、タクシーで使用できます。地下鉄は午前5:30頃から深夜まで運行しています。";
+            p[1].innerHTML = "大邱のバスシステムは広範囲をカバーしています。バスは、ルートに基づいて緑、赤、黄、青の色で区別されています。T-moneyカードを使ってバスに乗ることができます。バス停には路線図があり、「Daegu Bus」などのモバイルアプリでバスの到着時間を確認できます。";
+            p[2].innerHTML = "大邱ではタクシーが簡単に利用でき、路上で拾うか、モバイルアプリを通じて呼び出すことができます。ほとんどのタクシーはT-moneyカードまたは現金で支払いが可能です。タクシー運転手が英語を話せない場合があるため、韓国語で書かれた目的地を持参するのが便利です。";
+            p[3].innerHTML = "在大邱，您可以在地铁站或公交站刷卡后30分钟内免费换乘地铁或公交车（最多四次换乘）。换乘时，请使用同一张T-money卡。换乘必须在相同的交通模式之间进行（地铁-公交车或公交车-公交车）。";
+            p[4].innerHTML = "大邱の公共交通機関をナビゲートするために、次のアプリをダウンロードすることをお勧めします：";
+            option[0].innerHTML = "1. 銀行口座の開設";
+            option[1].innerHTML = "2. 携帯電話の開設方法";
+            option[2].innerHTML = "3. ゴミ分別ガイド";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">Public Transportation Guide - Daegu</h1>
+    <ul id="trans">
+        <li id="line"><button onclick="toen()">English</button></li>
+        <li id="line"><button onclick="tochn()">中國語</button></li>
+        <li><button onclick="tojp()">日本語</button></li>
+    </ul>
+    <section>
+        <h2>1. Subway</h2>
+        <p>Daegu has a well-connected subway system with three lines (Line 1, Line 2, and Line 3). You can buy a transportation card (T-money) at any subway station or convenience store, which can be used for subways, buses, and taxis. The subway operates from approximately 5:30 AM to midnight.</p>
+    </section>
+
+    <section>
+        <h2>2. Bus</h2>
+        <p>Daegu's bus system covers a wide range of routes. Buses are color-coded based on their routes: green, red, yellow, and blue. You can use your T-money card on buses as well. Bus stops have route maps, and you can check bus arrival times via mobile apps such as 'Daegu Bus'.</p>
+    </section>
+
+    <section>
+        <h2>3. Taxi</h2>
+        <p>Taxis in Daegu are readily available and can be hailed on the street or through mobile apps. Most taxis accept T-money cards or cash. While taxi drivers may not always speak English, having your destination written in Korean can be very helpful.</p>
+    </section>
+
+    <section>
+        <h2>4. Transfer Between Subway and Bus</h2>
+        <p>In Daegu, you can transfer between the subway and bus for free within 30 minutes of tapping out at a subway station or bus stop (up to four transfers). Simply use the same T-money card for both services. Transfers must occur between the same modes of transportation (subway-bus or bus-bus).</p>
+    </section>
+
+    <section>
+        <h2>5. Recommended Apps</h2>
+        <p>We recommend downloading the following apps to help with navigating Daegu's public transportation:</p>
+        <ul>
+            <li class="m1"><strong>Daegu Bus</strong>: Provides real-time bus arrival times and route maps.</li>
+            <li class="m1"><strong>Subway Korea</strong>: Offers subway maps and real-time updates for Daegu's subway system.</li>
+            <li class="m1"><strong>Kakao T</strong>: A popular app for calling taxis and checking public transportation routes.</li>
+        </ul>
+    </section>
+
+    <div class="options">
+        <a href="Mbank" class="option-button">1. Bank Account Opening</a>
+        <a href="Mmobile" class="option-button">2. Mobile Service Guide</a>
+        <a href="Waste" class="option-button">3. Waste Separation Guide</a>
+    </div>
+
+</body>
+</html>

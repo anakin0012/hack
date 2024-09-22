@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Guide for International Students</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/emergency.css' %}">
+    <script>
+        function toen()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let p = document.getElementsByTagName("p");
+            let h3 = document.getElementsByTagName("h3");
+            h1.innerHTML = "Emergency Guide for International Students";
+            h2[0].innerHTML = "1. In Case of Medical Emergency";
+            h2[1].innerHTML = "2. In Case of Fire";
+            h2[2].innerHTML = "3. In Case of Natural Disaster (Earthquake, Typhoon)";
+            h2[3].innerHTML = "4. In Case of Crime or Dangerous Situation";
+            h2[4].innerHTML = "5. Emergency Numbers and Useful Phrases";
+            p[0].innerHTML = "Dial <span class='emergency-number'>119</span> for an ambulance.<br><br>Go to the nearest hospital or clinic. You can find hospital locations through our app/website.<br><br>If you cannot speak Korean, use a translation app or show the following phrase:";
+            p[1].innerHTML = "I need medical help. Please take me to the hospital.<br>(Korean: 저는 병원이 필요합니다. 병원에 데려다 주세요.)";
+            p[2].innerHTML = "Dial <span class='emergency-number'>119</span> to report a fire.<br><br>Evacuate immediately and use the nearest emergency exit. Avoid using elevators. Use stairs.<br><br>If there is smoke, cover your nose and mouth with a cloth and stay low to the ground.";
+            p[3].innerHTML = "Take cover under a sturdy table or desk. Stay indoors until the shaking stops.";
+            p[4].innerHTML = "Stay indoors and avoid going out unless necessary. Keep updated with weather alerts.<br><br>Dial <span class='emergency-number'>119</span> if you need emergency rescue assistance.";
+            p[5].innerHTML = "<p>Dial <span class='emergency-number'>112</span> to report a crime (the police).<br><br>If you feel unsafe, move to a crowded or public place.<br><br>Keep your belongings secure and avoid walking alone late at night.</p>";
+            p[7].innerHTML = "<p><span class='emergency-number'>119</span>: Fire Department / Ambulance<br><br><span class='emergency-number'>112</span>: Police<br><br>Useful phrase: <span class='korean-phrase'>I am in an emergency. Please help.<br>(Korean: 긴급 상황입니다. 도와주세요.)</span></p>";
+            h3[0].innerHTML = "Earthquake:";
+            h3[1].innerHTML = "Typhoon";
+        }
+        function tochn()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let p = document.getElementsByTagName("p");
+            let h3 = document.getElementsByTagName("h3");
+            h1.innerHTML = "国际学生紧急指南";
+            h2[0].innerHTML = "1. 医疗紧急情况";
+            h2[1].innerHTML = "2. 火灾紧急情况";
+            h2[2].innerHTML = "3. 自然灾害紧急情况 (地震, 台风)";
+            h2[3].innerHTML = "4. 犯罪或危险情况";
+            h2[4].innerHTML = "5. 紧急电话和常用短语";
+            p[0].innerHTML = "拨打 <span class='emergency-number'>119</span> 呼叫救护车。<br><br>前往最近的医院或诊所。您可以通过我们的应用程序/网站查找医院位置。<br><br>如果您不会说韩语，请使用翻译应用或显示以下短语：";
+            p[1].innerHTML = "我需要医疗帮助。请带我去医院。<br>(韩语: 저는 병원이 필요합니다. 병원에 데려다 주세요.)";
+            p[2].innerHTML = "拨打 <span class='emergency-number'>119</span> 报告火灾。<br><br>立即疏散并使用最近的紧急出口。避免使用电梯，使用楼梯。<br><br>如果有烟雾，请用布遮住口鼻，并贴近地面。";
+            p[3].innerHTML = "躲在坚固的桌子或办公桌下。直到震动停止之前请保持在室内。";
+            p[4].innerHTML = "尽量留在室内，除非必要，不要外出。保持关注天气预警。<br><br>如果需要紧急救援，拨打 <span class='emergency-number'>119</span>。";
+            p[5].innerHTML = "拨打 <span class='emergency-number'>112</span> 报警 (警察)。<br><br>如果感到不安全，请前往人多或公共场所。<br><br>确保您的财物安全，避免在深夜独自行走。";
+            p[6].innerHTML = "<span class='emergency-number'>119</span>: 消防部门 / 救护车<br><br><span class='emergency-number'>112</span>: 警察<br><br>常用短语: <span class='korean-phrase'>我有紧急情况。请帮助我。<br>(韩语: 긴급 상황입니다. 도와주세요。)</span>";
+            h3[0].innerHTML = "地震:";
+            h3[1].innerHTML = "台风:";
+        }
+        function tojp()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let p = document.getElementsByTagName("p");
+            let h3 = document.getElementsByTagName("h3");
+            h1.innerHTML = "留学生のための緊急ガイド";
+            h2[0].innerHTML = "1. 医療の緊急時";
+            h2[1].innerHTML = "2. 火災の場合";
+            h2[2].innerHTML = "3. 自然災害（地震、台風）の場合";
+            h2[3].innerHTML = "4. 犯罪や危険な状況の場合";
+            h2[4].innerHTML = "5. 緊急連絡先と便利なフレーズ";
+            p[0].innerHTML = "<span class='emergency-number'>119</span> に電話して救急車を呼んでください。<br><br>最寄りの病院やクリニックに行ってください。病院の場所は、アプリやウェブサイトで確認できます。<br><br>韓国語が話せない場合は、翻訳アプリを使用するか、次のフレーズを見せてください：";
+            p[1].innerHTML = "私は医療が必要です。病院に連れて行ってください。<br>韓国語: 저는 병원이 필요합니다. 병원에 데려다 주세요。）";
+            p[2].innerHTML = "<span class='emergency-number'>119</span> に電話して火事を通報してください。<br><br>直ちに避難し、最寄りの非常口を使用してください。エレベーターの使用は避け、階段を利用してください。<br><br>煙がある場合は、布で鼻と口を覆い、地面に近い位置に移動してください。";
+            p[3].innerHTML = "頑丈なテーブルやデスクの下に隠れてください。揺れが収まるまで屋内に留まってください。";
+            p[4].innerHTML = "できるだけ屋内に留まり、必要でない限り外出を避けてください。天気警報を常に確認してください。<br><br>緊急救助が必要な場合は、<span class='emergency-number'>119</span> に電話してください。";
+            p[5].innerHTML = "<span class='emergency-number'>112</span> に電話して警察に通報してください。<br><br>安全を感じない場合は、人が多い場所や公共の場所に移動してください。<br><br>貴重品をしっかりと管理し、深夜に一人で歩くことは避けてください。";
+            p[6].innerHTML = "<span class='emergency-number'>119</span>: 消防署 / 救急車<br><br><span class='emergency-number'>112</span>: 警察<br><br>便利なフレーズ: <span class='korean-phrase'>緊急事態です。助けてください。<br>（韓国語: 긴급 상황입니다. 도와주세요。）</span>";
+            h3[0].innerHTML = "地震:";
+            h3[1].innerHTML = "台風:";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">Emergency Guide for International Students</h1>
+    <ul id="trans">
+        <li id="line"><button onclick="toen()">English</button></li>
+        <li id="line"><button onclick="tochn()">中國語</button></li>
+        <li><button onclick="tojp()">日本語</button></li>
+    </ul>
+    <section>
+        <h2>1. In Case of Medical Emergency</h2>
+        <p>Dial <span class="emergency-number">119</span> for an ambulance.<br><br>
+        Go to the nearest hospital or clinic. You can find hospital locations through our app/website.<br><br>
+        If you cannot speak Korean, use a translation app or show the following phrase:</p>
+        <p class="korean-phrase">I need medical help. Please take me to the hospital.<br>
+        (Korean: 저는 병원이 필요합니다. 병원에 데려다 주세요.)</p>
+    </section>
+
+    <section>
+        <h2>2. In Case of Fire</h2>
+        <p>Dial <span class="emergency-number">119</span> to report a fire.<br><br>
+        Evacuate immediately and use the nearest emergency exit. Avoid using elevators. Use stairs.<br><br>
+        If there is smoke, cover your nose and mouth with a cloth and stay low to the ground.</p>
+    </section>
+
+    <section>
+        <h2>3. In Case of Natural Disaster (Earthquake, Typhoon)</h2>
+        <h3>Earthquake:</h3>
+        <p>Take cover under a sturdy table or desk. Stay indoors until the shaking stops.</p>
+        <h3>Typhoon:</h3>
+        <p>Stay indoors and avoid going out unless necessary. Keep updated with weather alerts.<br><br>
+        Dial <span class="emergency-number">119</span> if you need emergency rescue assistance.</p>
+    </section>
+
+    <section>
+        <h2>4. In Case of Crime or Dangerous Situation</h2>
+        <p>Dial <span class="emergency-number">112</span> to report a crime (the police).<br><br>
+        If you feel unsafe, move to a crowded or public place.<br><br>
+        Keep your belongings secure and avoid walking alone late at night.</p>
+    </section>
+
+    <section>
+        <h2>5. Emergency Numbers and Useful Phrases</h2>
+        <p><span class="emergency-number">119</span>: Fire Department / Ambulance<br><br>
+        <span class="emergency-number">112</span>: Police<br><br>
+        Useful phrase: <span class="korean-phrase">I am in an emergency. Please help.<br>
+        (Korean: 긴급 상황입니다. 도와주세요.)</span></p>
+    </section>
+
+</body>
+</html>

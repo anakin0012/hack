@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Service Guide</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/Mmobile.css' %}">
+    <script>
+        function toen()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let m1 = document.getElementsByClassName("m1");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "Mobile Service Guide";
+            h2[0].innerHTML = "1. Choose a Mobile Carrier";
+            h2[1].innerHTML = "2. Required Documents";
+            h2[2].innerHTML = "3. Prepaid vs. Postpaid";
+            h2[3].innerHTML = "4. Mobile Apps for Easy Management";
+            m1[0].innerHTML = "Alien Registration Card (ARC)";
+            m1[1].innerHTML = "Passport";
+            m1[2].innerHTML = "Bank account information (for postpaid plans)";
+            m1[3].innerHTML = "<strong>SK Telecom:</strong> T World";
+            m1[4].innerHTML = "<strong>KT:</strong> KT Customer";
+            m1[5].innerHTML = "<strong>LG U+:</strong> U+ 고객센터";
+            p[0].innerHTML = "In South Korea, there are three major mobile carriers: SK Telecom, KT, and LG U+. Each carrier offers various plans for both prepaid and postpaid services. Visit a nearby store for these carriers to explore their options.";
+            p[1].innerHTML = "When signing up for a mobile plan, make sure you have the following documents:";
+            p[2].innerHTML = "<strong>Prepaid:</strong> You pay in advance for the usage, and you can top up your balance as needed. Prepaid plans are popular for short-term stays.";
+            p[3].innerHTML = "<strong>Postpaid:</strong> You sign a contract and pay monthly based on your usage. Postpaid plans usually require a bank account for automatic payments.";
+            p[4].innerHTML = "Each carrier offers mobile apps that help you manage your plan, check your data usage, and pay your bills. You can download apps such as:";
+            option[0].innerHTML = "1. Bank Account Opening";
+            option[1].innerHTML = "2. Public Transportation Guide";
+            option[2].innerHTML = "3. Waste Separation Guide";
+        }
+        function tochn()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let m1 = document.getElementsByClassName("m1");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "手机服务指南";
+            h2[0].innerHTML = "1. 选择运营商";
+            h2[1].innerHTML = "2. 所需文件";
+            h2[2].innerHTML = "3. 预付费与后付费";
+            h2[3].innerHTML = "4. 移动应用程序";
+            m1[0].innerHTML = "外国人登记证 (ARC)";
+            m1[1].innerHTML = "护照";
+            m1[2].innerHTML = "银行账户信息（适用于后付费计划）";
+            m1[3].innerHTML = "<strong>SK电信：</strong> T World";
+            m1[4].innerHTML = "<strong>KT：</strong> KT 客户端";
+            m1[5].innerHTML = "<strong>LG U+：</strong> U+ 客户中心";
+            p[0].innerHTML = "在韩国，有三大主要移动运营商：SK电信、KT和LG U+。每个运营商都提供预付费和后付费的各种套餐。可以访问这些运营商的附近门店，了解他们的服务选项。";
+            p[1].innerHTML = "注册手机计划时，请确保您携带以下文件：";
+            p[2].innerHTML = "<strong>预付费：</strong>您提前为使用付费，并根据需要充值余额。预付费套餐适合短期停留。";
+            p[3].innerHTML = "<strong>后付费：</strong>您签订合同并根据每月的使用情况付款。后付费套餐通常需要银行账户用于自动付款。";
+            p[4].innerHTML = "每家运营商都有手机应用程序，帮助您管理计划，查看数据使用情况并支付账单。您可以下载以下应用程序：";
+            option[0].innerHTML = "1. 银行账户开设";
+            option[1].innerHTML = "2. 公共交通指南";
+            option[2].innerHTML = "3. 垃圾分类指南";
+        }
+        function tojp()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let m1 = document.getElementsByClassName("m1");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "携帯電話開設ガイド";
+            h2[0].innerHTML = "1. 携帯通信会社の選択";
+            h2[1].innerHTML = "2. 必要書類";
+            h2[2].innerHTML = "3. プリペイド vs. 後払い";
+            h2[3].innerHTML = "4. モバイルアプリ";
+            m1[0].innerHTML = "外国人登録証 (ARC)";
+            m1[1].innerHTML = "パスポート";
+            m1[2].innerHTML = "銀行口座情報（後払いプランの場合）";
+            m1[3].innerHTML = "<strong>SKテレコム：</strong> T World";
+            m1[4].innerHTML = "<strong>KT：</strong> KTお客様センター";
+            m1[5].innerHTML = "<strong>LG U+：</strong> U+お客様センター";
+            p[0].innerHTML = "韓国には、SKテレコム、KT、LG U+の3つの主要な携帯通信会社があります。それぞれの通信会社は、プリペイドと後払いのさまざまなプランを提供しています。近くの店舗を訪れて、オプションを確認してください。";
+            p[1].innerHTML = "携帯電話プランの契約には、以下の書類が必要です：";
+            p[2].innerHTML = "<strong>プリペイド：</strong> 使用料を事前に支払い、必要に応じてチャージできます。プリペイドプランは短期滞在に適しています。";
+            p[3].innerHTML = "<strong>後払い：</strong> 契約を締結し、使用量に基づいて毎月支払います。後払いプランには通常、自動引き落とし用の銀行口座が必要です。";
+            p[4].innerHTML = "各通信会社は、プランの管理、データ使用量の確認、請求書の支払いに役立つモバイルアプリを提供しています。次のアプリをダウンロードできます：";
+            option[0].innerHTML = "1. 銀行口座の開設";
+            option[1].innerHTML = "2. 公共交通ガイド";
+            option[2].innerHTML = "3. ゴミ分別ガイド";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">Mobile Service Guide</h1>
+    <ul id="trans">
+        <li id="line"><button onclick="toen()">English</button></li>
+        <li id="line"><button onclick="tochn()">中國語</button></li>
+        <li><button onclick="tojp()">日本語</button></li>
+    </ul>
+    <section>
+        <h2>1. Choose a Mobile Carrier</h2>
+        <p>In South Korea, there are three major mobile carriers: SK Telecom, KT, and LG U+. Each carrier offers various plans for both prepaid and postpaid services. Visit a nearby store for these carriers to explore their options.</p>
+    </section>
+
+    <section>
+        <h2>2. Required Documents</h2>
+        <p>When signing up for a mobile plan, make sure you have the following documents:</p>
+        <ul>
+            <li class="m1">Alien Registration Card (ARC)</li>
+            <li class="m1">Passport</li>
+            <li class="m1">Bank account information (for postpaid plans)</li>
+        </ul>
+    </section>
+    <section>
+        <h2>3. Prepaid vs. Postpaid</h2>
+        <p><strong>Prepaid:</strong> You pay in advance for the usage, and you can top up your balance as needed. Prepaid plans are popular for short-term stays.</p>
+        <p><strong>Postpaid:</strong> You sign a contract and pay monthly based on your usage. Postpaid plans usually require a bank account for automatic payments.</p>
+    </section>
+
+    <section>
+        <h2>4. Mobile Apps for Easy Management</h2>
+        <p>Each carrier offers mobile apps that help you manage your plan, check your data usage, and pay your bills. You can download apps such as:</p>
+        <ul>
+            <li class="m1"><strong>SK Telecom:</strong> T World</li>
+            <li class="m1"><strong>KT:</strong> KT Customer</li>
+            <li class="m1"><strong>LG U+:</strong> U+ 고객센터</li>
+        </ul>
+    </section>
+
+    <div class="options">
+        <a href="Mbank" class="option-button">1. Bank Account Opening</a>
+        <a href="Pt" class="option-button">2. Public Transportation Guide</a>
+        <a href="Waste" class="option-button">3. Waste Separation Guide</a>
+    </div>
+
+</body>
+</html>

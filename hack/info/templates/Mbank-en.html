@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Opening Guide</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/Mbank.css' %}">
+    <script>
+        function toen()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let element = document.getElementsByClassName("element");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "Bank Account Opening Guide for Foreigners";
+            h2[0].innerHTML = "1. Required Documents";
+            h2[1].innerHTML = "2. Choosing a Bank";
+            h2[2].innerHTML = "3. Apply for Account Opening";
+            h2[3].innerHTML = "4. Complete the Process";
+            h2[4].innerHTML = "5. Important Notes";
+            element[0].innerHTML = "Alien Registration Card (or Passport)";
+            element[1].innerHTML = "Certificate of Enrollment (if student)";
+            element[2].innerHTML = "Proof of Residence (e.g., lease agreement or utility bill)";
+            element[3].innerHTML = "Check for any account opening fees or requirements.";
+            element[4].innerHTML = "Some banks may require a minimum deposit to open an account.";
+            p[0].innerHTML = "Visit a nearby bank. Popular options include KB Kookmin Bank, Shinhan Bank, Woori Bank, and Hana Bank.";
+            p[1].innerHTML = "Most banks offer English services, so feel free to communicate in English when visiting.";
+            p[2].innerHTML = "Take a number at the bank and wait for your turn. Once at the counter, ask the staff for account opening assistance. They will verify your documents and guide you through the process.";
+            p[3].innerHTML = "After the account is opened, you can request a bank card (debit card). You may also apply for internet banking or mobile banking services if needed.";
+            option[0].innerHTML = "1. Public Transportation Guide";
+            option[1].innerHTML = "2. Mobile Service Guide";
+            option[2].innerHTML = "3. Waste Separation Guide";
+        }
+        function tochn()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let element = document.getElementsByClassName("element")
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "外国人银行账户开设指南";
+            h2[0].innerHTML = "1. 所需文件"
+            h2[1].innerHTML = "2. 选择银行"
+            h2[2].innerHTML = "3. 申请开户"
+            h2[3].innerHTML = "4. 完成开户"
+            h2[4].innerHTML = "5. 重要注意事项"
+            element[0].innerHTML = "外国人登记证（或护照）";
+            element[1].innerHTML = "在学证明（如果是学生）";
+            element[2].innerHTML = "住所证明（如租赁合同或水电账单）";
+            element[3].innerHTML = "请确认是否有开户费用或其他要求。";
+            element[4].innerHTML = "一些银行可能需要最低存款才能开设账户。";
+            p[0].innerHTML = "前往附近的银行，常见的银行包括KB国民银行、新韩银行、友利银行、韩亚银行。";
+            p[1].innerHTML = "大多数银行提供英语服务，您可以用英语沟通。";
+            p[2].innerHTML = "在银行取号等待轮到您。到柜台后，请工作人员帮助开户。工作人员会验证您的文件，并指导您完成开户流程。";
+            p[3].innerHTML = "开户后，您可以申请银行借记卡。如果需要，您还可以申请网上银行或手机银行服务。";
+            option[0].innerHTML = "1. 公共交通指南";
+            option[1].innerHTML = "2. 手机服务指南";
+            option[2].innerHTML = "3. 垃圾分类指南";
+        }
+        function tojp()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let element = document.getElementsByClassName("element");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "外国人向け銀行口座開設ガイド";
+            h2[0].innerHTML = "1. 必要書類"
+            h2[1].innerHTML = "2. 銀行の選択"
+            h2[2].innerHTML = "3. 口座開設の申請"
+            h2[3].innerHTML = "4. 手続きの完了"
+            h2[4].innerHTML = "5. 注意事項"
+            element[0].innerHTML = "外国人登録証（またはパスポート）";
+            element[1].innerHTML = "在学証明書（学生の場合）";
+            element[2].innerHTML = "住居証明書（賃貸契約書または公共料金請求書など）";
+            element[3].innerHTML = "口座開設時の手数料や利用条件を確認してください。";
+            element[4].innerHTML = "一部の銀行では、一定の預金額が必要となる場合があります。";
+            p[0].innerHTML = "近くの銀行に行きましょう。代表的な銀行には、KB国民銀行、新韓銀行、ウリ銀行、ハナ銀行があります。";
+            p[1].innerHTML = "ほとんどの銀行では英語サービスが提供されているため、英語でのコミュニケーションも可能です。";
+            p[2].innerHTML = "銀行で番号札を取り、順番を待ってください。窓口に到着したら、口座開設を依頼しましょう。スタッフが書類を確認し、手続きについて案内してくれます。";
+            p[3].innerHTML = "口座開設後、銀行のデビットカードを発行できます。また、インターネットバンキングやモバイルバンキングの申請も可能です。";
+            option[0].innerHTML = "1. 公共交通ガイド";
+            option[1].innerHTML = "2. 携帯サービスガイド";
+            option[2].innerHTML = "3. ゴミ分別ガイド";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">Bank Account Opening Guide for Foreigners</h1>
+    <ul id="trans">
+        <li id="line"><button onclick="toen()">English</button></li>
+        <li id="line"><button onclick="tochn()">中國語</button></li>
+        <li><button onclick="tojp()">日本語</button></li>
+    </ul>
+    <section>
+        <h2>1. Required Documents</h2>
+        <ul>
+            <li class="element">Alien Registration Card (or Passport)</li>
+            <li class="element">Certificate of Enrollment (if student)</li>
+            <li class="element">Proof of Residence (e.g., lease agreement or utility bill)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Choosing a Bank</h2>
+        <p>Visit a nearby bank. Popular options include KB Kookmin Bank, Shinhan Bank, Woori Bank, and Hana Bank.</p>
+        <p>Most banks offer English services, so feel free to communicate in English when visiting.</p>
+    </section>
+
+    <section>
+        <h2>3. Apply for Account Opening</h2>
+        <p>Take a number at the bank and wait for your turn. Once at the counter, ask the staff for account opening assistance. They will verify your documents and guide you through the process.</p>
+    </section>
+
+    <section>
+        <h2>4. Complete the Process</h2>
+        <p>After the account is opened, you can request a bank card (debit card). You may also apply for internet banking or mobile banking services if needed.</p>
+    </section>
+
+    <section>
+        <h2>5. Important Notes</h2>
+        <ul>
+            <li class="element">Check for any account opening fees or requirements.</li>
+            <li class="element">Some banks may require a minimum deposit to open an account.</li>
+        </ul>
+    </section>
+    <div class="options">
+        <a href="Pt" class="option-button">1. Public Transportation Guide</a>
+        <a href="Mmobile" class="option-button">2. Mobile Service Guide</a>
+        <a href="Waste" class="option-button">3. Waste Separation Guide</a>
+    </div>
+</body>
+</html>

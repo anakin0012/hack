@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Separation Guide</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/Waste_seperation.css' %}">
+    <script>
+        function toen()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "Waste Separation Guide";
+            h2[0].innerHTML = "1. General Waste";
+            h2[1].innerHTML = "2. Recyclables";
+            h2[2].innerHTML = "3. Food Waste";
+            h2[3].innerHTML = "4. Large Items";
+            p[0].innerHTML = "General waste should be disposed of in standard waste bags, which can be purchased at convenience stores or supermarkets. These bags are usually white and are used for non-recyclable items like food waste, diapers, and other mixed garbage.";
+            p[1].innerHTML = "Recyclables such as plastics, paper, glass, and cans should be separated and placed in designated recycling bins. Make sure to rinse out any food containers before recycling. Many apartment complexes and neighborhoods have specific bins for each material.";
+            p[2].innerHTML = "Food waste must be disposed of separately using special food waste bags. These bags can also be purchased at convenience stores. Make sure to remove any packaging or non-organic materials before placing food waste in the designated bins.";
+            p[3].innerHTML = "For large items like furniture or appliances, you will need to purchase a separate disposal sticker from your local district office or convenience store. Contact your local government office to arrange for pickup.";
+            option[0].innerHTML = "1. Bank Account Opening";
+            option[1].innerHTML = "2. Public Transportation Guide";
+            option[2].innerHTML = "3. Activate Mobile Service";
+        }
+        function tochn()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "垃圾分类指南";
+            h2[0].innerHTML = "1. 生活垃圾";
+            h2[1].innerHTML = "2. 可回收物";
+            h2[2].innerHTML = "3. 厨余垃圾";
+            h2[3].innerHTML = "4. 大件物品";
+            p[0].innerHTML = "生活垃圾应放入标准垃圾袋中，这些垃圾袋可在便利店或超市购买。生活垃圾通常包括不可回收的物品，如食物垃圾、尿布和其他混合垃圾。";
+            p[1].innerHTML = "可回收物如塑料、纸张、玻璃和易拉罐应分开处理并放入指定的回收箱。在回收之前，请确保将食品容器清洗干净。许多公寓和社区都有专门的回收箱。";
+            p[2].innerHTML = "厨余垃圾必须使用专用的厨余垃圾袋处理。厨余垃圾袋也可在便利店购买。处理时，请去除任何包装或非有机材料，并将厨余垃圾放入指定的垃圾桶中。";
+            p[3].innerHTML = "对于大件物品，如家具或家电，您需要从当地政府办公室或便利店购买单独的处理标签。请联系当地政府办公室安排上门收集。";
+            option[0].innerHTML = "1. 银行账户开设";
+            option[1].innerHTML = "2. 公共交通指南";
+            option[2].innerHTML = "3. 手机服务指南";
+        }
+        function tojp()
+        {
+            let h1 = document.getElementById("title");
+            let h2 = document.getElementsByTagName("h2");
+            let p = document.getElementsByTagName("p");
+            let option = document.getElementsByClassName("option-button");
+            h1.innerHTML = "ゴミ分別ガイド";
+            h2[0].innerHTML = "1. 一般ゴミ";
+            h2[1].innerHTML = "2. リサイクル可能なもの";
+            h2[2].innerHTML = "3. 生ゴミ";
+            h2[3].innerHTML = "4. 大型品";
+            p[0].innerHTML = "一般ゴミは、コンビニエンスストアやスーパーマーケットで購入できる専用のゴミ袋に入れて捨ててください。これらの袋は通常、白色で、食べ物のゴミ、おむつ、その他の混合ゴミなどの非リサイクル品に使用されます。";
+            p[1].innerHTML = "プラスチック、紙、ガラス、缶などのリサイクル可能なものは、指定されたリサイクル箱に分別して入れてください。リサイクル前に食品容器をすすぐことを忘れないでください。多くのマンションや地域には、材料ごとに専用のリサイクル箱があります。";
+            p[2].innerHTML = "生ゴミは、専用の生ゴミ袋を使用して捨てる必要があります。これらの袋は、コンビニエンスストアでも購入できます。捨てる前に、包装や非有機物を取り除き、指定されたゴミ箱に入れてください。";
+            p[3].innerHTML = "家具や家電などの大型品については、最寄りの区役所やコンビニエンスストアで、別途処理ステッカーを購入する必要があります。回収の手配は、地元の行政にお問い合わせください。";
+            option[0].innerHTML = "1. 銀行口座の開設";
+            option[1].innerHTML = "2. 公共交通ガイド";
+            option[2].innerHTML = "3. 携帯電話開設ガイド";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">Waste Separation Guide</h1>
+    <ul id="trans">
+        <li id="line"><button onclick="toen()">English</button></li>
+        <li id="line"><button onclick="tochn()">中國語</button></li>
+        <li><button onclick="tojp()">日本語</button></li>
+    </ul>
+    <section>
+        <h2>1. General Waste</h2>
+        <p>General waste should be disposed of in standard waste bags, which can be purchased at convenience stores or supermarkets. These bags are usually white and are used for non-recyclable items like food waste, diapers, and other mixed garbage.</p>
+    </section>
+
+    <section>
+        <h2>2. Recyclables</h2>
+        <p>Recyclables such as plastics, paper, glass, and cans should be separated and placed in designated recycling bins. Make sure to rinse out any food containers before recycling. Many apartment complexes and neighborhoods have specific bins for each material.</p>
+    </section>
+
+    <section>
+        <h2>3. Food Waste</h2>
+        <p>Food waste must be disposed of separately using special food waste bags. These bags can also be purchased at convenience stores. Make sure to remove any packaging or non-organic materials before placing food waste in the designated bins.</p>
+    </section>
+
+    <section>
+        <h2>4. Large Items</h2>
+        <p>For large items like furniture or appliances, you will need to purchase a separate disposal sticker from your local district office or convenience store. Contact your local government office to arrange for pickup.</p>
+    </section>
+
+    <div class="options">
+        <a href="Mbank" class="option-button">1. Bank Account Opening</a>
+        <a href="Pt" class="option-button">2. Public Transportation Guide</a>
+        <a href="Mmobile" class="option-button">3. Activate Mobile Service</a>
+    </div>
+
+</body>
+</html>
