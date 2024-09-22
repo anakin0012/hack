@@ -116,3 +116,10 @@ a{
 a:hover{
     color:black;
 }
+footer {
+    margin-top: 650px;
+    padding: 20px;
+    background-color:  #333;
+    color: white;
+    text-align: center;
+}

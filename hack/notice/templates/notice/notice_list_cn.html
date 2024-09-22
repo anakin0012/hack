@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <title>공지사항</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/notice_cn.css' %}">
 </head>
 <body>
     <h1>공지사항</h1>
@@ -10,6 +12,12 @@
             <li><a href="{{ notice.link }}">{{ notice.title }}</a></li>
         {% endfor %}
     </ul>
-    <a href="https://cn.knu.ac.kr/board/notice01.htm">추가정보</a>
+    <div>
+        <a id="info" href="https://cn.knu.ac.kr/board/notice01.htm">추가정보</a>
+        <a id="info" href="http://127.0.0.1:8000/">Main</a>
+    </div>
+    <footer>
+        © 2024 Kyungpook National University
+    </footer>
 </body>
 </html>

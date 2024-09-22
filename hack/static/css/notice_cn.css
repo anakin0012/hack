@@ -1,0 +1,72 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+html::before
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("campus.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity:0.5;
+}
+h1{
+    background-color: #ad1e1e;
+    margin: 0;
+    height: 80px;
+    padding-top:30px;
+    padding-left: 15px;
+    color:white;
+}
+ul
+{
+    background-color: white;
+    width: 800px;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding: 50px;
+    font-size: 20px;
+    border-radius:10px;
+    box-shadow: 10px 10px 10px gray;
+    list-style: none;
+}
+a
+{
+    color: black;
+    text-decoration-line: none;
+}
+li
+{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px dotted black;
+}
+#info
+{
+    margin-left: 50px;
+    font-size: 20px;
+    border: 3px solid #ad1e1e;
+    background-color: #ad1e1e;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+}
+#info:hover
+{
+    background-color:#9a1313;
+    border: 3px solid #9a1313;
+}
+footer {
+    margin-top: 120px;
+    padding: 20px;
+    background-color:  #333;
+    color: white;
+    text-align: center;
+}

@@ -6,4 +6,5 @@ urlpatterns = [
     path('notices/',include('notice.urls')),
     path('',include('main.urls')),
     path('info/',include('info.urls')),
+    path('food/',include('food.urls')),
 ]

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyungpook National University Nearby Restaurants</title>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e642a8ca14642fa22cf8d8877543cbaf"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #ad1e1e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #map {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 16px;
+            background-color: #ad1e1e;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #A93226;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color:  #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Kyungpook National University Nearby Restaurants
+</header>
+
+<div id="map"></div>
+
+<div class="container">
+    <h2>Explore Nearby Restaurants</h2>
+    <p>Hover over the markers on the map to see details about nearby restaurants.</p>
+    <div class="button-container">
+        <a href="http://127.0.0.1:8000/" class="button">Main</a>
+    </div>
+</div>
+
+<footer>
+    © 2024 Kyungpook National University
+</footer>
+
+<script>
+
+    var mapContainer = document.getElementById('map'),
+        mapOption = { 
+            center: new kakao.maps.LatLng(35.888491, 128.610793), 
+            level: 3
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+
+    var locations = [
+        {
+            position: new kakao.maps.LatLng(35.8918864299862, 128.60771922615254),
+            content: `
+                <div style="padding:10px;">
+                    <h4>나린찜닭</h4>
+                    <p>The most famous jjimdak spot near the North Gate. Similar to Sutak, but they have a unique twist by adding king-sized dumplings in the jjimdak.</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.89416446965368, 128.60970615070948),
+            content: `
+                <div style="padding:10px;">
+                    <h4>고운라멘</h4>
+                    <p>Ramen, gopchang (tripe) rice bowl – recommended for a quick meal. If you expect traditional Japanese ramen, you might be disappointed.</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.893848956645584, 128.6093785946792),
+            content: `
+                <div style="padding:10px;">
+                    <h4>마름모식당</h4>
+                    <p>People mostly order the Hanwoo steak rice bowl or salmon rice bowl here. The Hanwoo rice bowl is decent, but the salmon is not that good.</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.89237782021333, 128.61508541883487),
+            content: `
+                <div style="padding:10px;">
+                    <h4>찬누리식당</h4>
+                    <p>A typical home-style meal spot. Cash payment makes all meals 5,500 won. Grilled pork belly and soft tofu stew are the go-to choices. They also serve yogurt after the meal.</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.88372813849927, 128.6099599634957),
+            content: `
+                <div style="padding:10px;">
+                    <h4>터질것같은김밥</h4>
+                    <p>Located on the way to Dongdaegu Market. The owner couple is very kind, and the kimbap is huge.</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.8855620916658, 128.61045387699966),
+            content: `
+                <div style="padding:10px;">
+                    <h4>종이밥</h4>
+                    <p>A simple cup rice spot for a quick meal. Cheap and filling.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.885709129675504, 128.6102409195482),
+            content: `
+                <div style="padding:10px;">
+                    <h4>뽀근닭</h4>
+                    <p>Clean and tasty jjimdak.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.8858710794746, 128.61009193656213),
+            content: `
+                <div style="padding:10px;">
+                    <h4>키아누 카페</h4>
+                    <p>The best place to study. Every engineering student near East Gate probably knows about it. Top-notch in terms of value.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89607758935579, 128.61353255569645),
+            content: `
+                <div style="padding:10px;">
+                    <h4>또바기 감자탕</h4>
+                    <p>The hangover soup is pretty standard.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89440762629188, 128.61038940668772),
+            content: `
+                <div style="padding:10px;">
+                    <h4>돈까스반상</h4>
+                    <p>The combination of tonkatsu and banquet noodles is tasty.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89450083176491, 128.61116653259842),
+            content: `
+                <div style="padding:10px;">
+                    <h4>123김밥</h4>
+                    <p>The owner is super friendly, and the kimbap is incredibly thick. It makes you wonder how they profit, given how stuffed they are (similar to the ones at 터질것같은김밥).</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.894650778924095, 128.61107266672474),
+            content: `
+                <div style="padding:10px;">
+                    <h4>반미리코</h4>
+                    <p>A well-known spot with huge portions. Famous for banh mi, beef pho, pad thai, and pizza. Be sure to try the beef pho!</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89451335735333, 128.6105687457796),
+            content: `
+                <div style="padding:10px;">
+                    <h4>미들</h4>
+                    <p>The beef rice bowl, soy-marinated shrimp rice bowl, and rose pasta are all delicious.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89336602872033, 128.60792634234505),
+            content: `
+                <div style="padding:10px;">
+                    <h4>저스트마라관</h4>
+                    <p>The maratang here is too rich for my taste. It looks the cleanest in terms of hygiene and offers a variety of toppings, so I go there often.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.8878322216729, 128.61637732136722),
+            content: `
+                <div style="padding:10px;">
+                    <h4>경주식당</h4>
+                    <p>The top 백반집 (home meal place) at 경대. The grilled pork belly, soybean paste stew, and soft tofu stew are all good, and the side dishes are top-notch.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.88401699573498, 128.61025925536296),
+            content: `
+                <div style="padding:10px;">
+                    <h4>집밥풀하우스</h4>
+                    <p>The jjimdak set is delicious. Every dish is 6,000 won.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89371337746078, 128.60940907414147),
+            content: `
+                <div style="padding:10px;">
+                    <h4>고씨네카레</h4>
+                    <p>Quite tasty.</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.893298569250845, 128.60926224336166),
+            content: `
+                <div style="padding:10px;">
+                    <h4>혜화문식당</h4>
+                    <p>Serves clean Korean-style home meals. Recommended are the grilled pork belly set and chicken karaage set. They also serve seaweed soup.</p>
+                </div>`
+        }
+    ];
+
+
+    locations.forEach(function(location) {
+
+        var marker = new kakao.maps.Marker({
+            position: location.position
+        });
+
+
+        marker.setMap(map);
+
+
+        var infowindow = new kakao.maps.InfoWindow({
+            content: location.content
+        });
+
+
+        kakao.maps.event.addListener(marker, 'mouseover', function() {
+            infowindow.open(map, marker);
+        });
+
+        kakao.maps.event.addListener(marker, 'mouseout', function() {
+            infowindow.close();
+        });
+    });
+</script>
+
+</body>
+</html>

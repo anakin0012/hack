@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyungpook National University Map</title>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e642a8ca14642fa22cf8d8877543cbaf"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #ad1e1e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #map {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 16px;
+            background-color: #ad1e1e;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #A93226;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color:  #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Kyungpook National University 近くの病院
+</header>
+
+<div id="map"></div>
+
+<div class="container">
+    <h2>近くの病院を探す</h2>
+    <p>地図のマーカーにマウスを当てて、病院の詳細を確認してください。</p>
+    <div class="button-container">
+        <a href="Emergency" class="button">緊急マニュアル</a>
+    </div>
+</div>
+
+<footer>
+    © 2024 Kyungpook National University
+</footer>
+
+<script>
+
+    var mapContainer = document.getElementById('map'),
+        mapOption = { 
+            center: new kakao.maps.LatLng(35.888491, 128.610793),
+            level: 3 
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+
+    var locations = [
+        {
+            position: new kakao.maps.LatLng(35.86674348719936, 128.6042662260757),
+            content: `
+                <div style="padding:10px;">
+                    <h4>慶北大学病院（大邱）</h4>
+                    <p>TEL:053-200-5114</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.95682866294097, 128.5641018017438),
+            content: `
+                <div style="padding:10px;">
+                    <h4>慶北大学病院（七谷）</h4>
+                    <p>TEL:1533-8888</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.85390092652296, 128.48011995763366),
+            content: `
+                <div style="padding:10px;">
+                    <h4>東山病院</h4>
+                    <p>TEL:1577-6622</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.88444156711113, 128.62440029473382),
+            content: `
+                <div style="padding:10px;">
+                    <h4>ファティマ病院</h4>
+                    <p>TEL:1688-7770</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.84408127836678, 128.56797192703073),
+            content: `
+                <div style="padding:10px;">
+                    <h4>大邱カトリック病院</h4>
+                    <p>TEL:1688-0077</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.84737064855297, 128.58512617719208),
+            content: `
+                <div style="padding:10px;">
+                    <h4>嶺南大学病院</h4>
+                    <p>TEL:1522-3114</p>
+                </div>`
+        }
+    ];
+
+
+    locations.forEach(function(location) {
+
+        var marker = new kakao.maps.Marker({
+            position: location.position
+        });
+
+
+        marker.setMap(map);
+
+
+        var infowindow = new kakao.maps.InfoWindow({
+            content: location.content
+        });
+
+
+        kakao.maps.event.addListener(marker, 'mouseover', function() {
+            infowindow.open(map, marker);
+        });
+
+
+        kakao.maps.event.addListener(marker, 'mouseout', function() {
+            infowindow.close();
+        });
+    });
+</script>
+
+</body>
+</html>

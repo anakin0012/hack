@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>慶北大学近くのレストラン</title>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e642a8ca14642fa22cf8d8877543cbaf"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #ad1e1e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #map {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 16px;
+            background-color: #ad1e1e;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #A93226;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color:  #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    慶北大学近くのレストラン
+</header>
+
+<div id="map"></div>
+
+<div class="container">
+    <h2>慶北大学近くのレストランを探す</h2>
+    <p>マップ上のマーカーにカーソルを置いて、レストランの詳細を確認してください。</p>
+    <div class="button-container">
+        <a href="http://127.0.0.1:8000/" class="button">メイン</a>
+    </div>
+</div>
+
+<footer>
+    © 2024 慶北大学
+</footer>
+
+<script>
+
+    var mapContainer = document.getElementById('map'),
+        mapOption = { 
+            center: new kakao.maps.LatLng(35.888491, 128.610793), 
+            level: 3
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+
+    var locations = [
+        {
+            position: new kakao.maps.LatLng(35.8918864299862, 128.60771922615254),
+            content: `
+                <div style="padding:10px;">
+                    <h4>나린찜닭</h4>
+                    <p>北門で最も有名な蒸し鶏のお店。수탉に似ていますが、蒸し鶏に特大の餃子を入れる独特な特徴があります。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.89416446965368, 128.60970615070948),
+            content: `
+                <div style="padding:10px;">
+                    <h4>고운라멘</h4>
+                    <p>ラーメンと牛腸丼です。さっと一食済ませるにはお勧めです。伝統的な日本のラーメンを期待すると、がっかりするかもしれません。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.893848956645584, 128.6093785946792),
+            content: `
+                <div style="padding:10px;">
+                    <h4>마름모식당</h4>
+                    <p>主に注文されるのは、韓牛ステーキ丼かサーモン丼です。韓牛ステーキ丼はそこそこ美味しいですが、サーモンはあまり良くないです。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.89237782021333, 128.61508541883487),
+            content: `
+                <div style="padding:10px;">
+                    <h4>찬누리식당</h4>
+                    <p>典型的な家庭料理の店です。現金で払うと全メニューが5,500ウォンです。焼き豚とソフト豆腐チゲが定番で、食後にはヨーグルトも出ます。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.88372813849927, 128.6099599634957),
+            content: `
+                <div style="padding:10px;">
+                    <h4>터질것같은김밥</h4>
+                    <p>東大邱市場に行く途中にあります。店主の夫婦はとても親切で、キンパが非常に厚いです。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.8855620916658, 128.61045387699966),
+            content: `
+                <div style="padding:10px;">
+                    <h4>종이밥</h4>
+                    <p>簡単に食事を済ませられるカップライスのお店。安くて量が多いです。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.885709129675504, 128.6102409195482),
+            content: `
+                <div style="padding:10px;">
+                    <h4>뽀근닭</h4>
+                    <p>清潔で美味しい蒸し鶏。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.8858710794746, 128.61009193656213),
+            content: `
+                <div style="padding:10px;">
+                    <h4>키아누 カフェ</h4>
+                    <p>勉強に最適な場所です。東門近くの工学部の学生なら、ほとんどの人が知っています。コストパフォーマンスが最高です。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89607758935579, 128.61353255569645),
+            content: `
+                <div style="padding:10px;">
+                    <h4>또바기 감자탕</h4>
+                    <p>標準的なヘジャンタン（解酒スープ）です。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89440762629188, 128.61038940668772),
+            content: `
+                <div style="padding:10px;">
+                    <h4>돈까스반상</h4>
+                    <p>トンカツと宴会麺の組み合わせは美味しいです。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89450083176491, 128.61116653259842),
+            content: `
+                <div style="padding:10px;">
+                    <h4>123김밥</h4>
+                    <p>店主が非常に親切で、キンパが非常に分厚いです。どうやって利益を出しているのか不思議になるくらいです（특히 터질것같은김밥と似ています）。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.894650778924095, 128.61107266672474),
+            content: `
+                <div style="padding:10px;">
+                    <h4>반미리코</h4>
+                    <p>量が多いことで有名なお店です。バインミー、牛肉フォー、パッタイ、ピザが有名です。特に牛肉フォーは必食です！</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89451335735333, 128.6105687457796),
+            content: `
+                <div style="padding:10px;">
+                    <h4>미들</h4>
+                    <p>チャドル（牛バラ肉）丼、エビの醤油漬け丼、ロゼパスタが美味しいです。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89336602872033, 128.60792634234505),
+            content: `
+                <div style="padding:10px;">
+                    <h4>저스트마라관</h4>
+                    <p>このお店のマーラータンは私には少し濃すぎますが、衛生的でトッピングの種類も多いのでよく行きます。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.8878322216729, 128.61637732136722),
+            content: `
+                <div style="padding:10px;">
+                    <h4>경주식당</h4>
+                    <p>慶大の家庭料理の中でトップです。焼き豚、テンジャンチゲ、ソフト豆腐チゲが美味しく、バンチャン（おかず）の質も最高です。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.88401699573498, 128.61025925536296),
+                content: `
+                    <div style="padding:10px;">
+                        <h4>집밥풀하우스</h4>
+                        <p>チムダク定食が美味しいです。すべての料理が6,000ウォンです。</p>
+                    </div>`
+            }
+            ,
+            {
+                position: new kakao.maps.LatLng(35.89371337746078, 128.60940907414147),
+                content: `
+                    <div style="padding:10px;">
+                        <h4>고씨네カレー</h4>
+                        <p>かなり美味しいです。</p>
+                    </div>`
+            }
+            ,
+            {
+                position: new kakao.maps.LatLng(35.893298569250845, 128.60926224336166),
+                content: `
+                    <div style="padding:10px;">
+                        <h4>혜화문식당</h4>
+                        <p>清潔な韓国スタイルの家庭料理を提供しています。おすすめは焼き豚定食と唐揚げ定食です。わかめスープも提供されます。</p>
+                    </div>`
+            }
+        ];
+
+
+        locations.forEach(function(location) {
+
+            var marker = new kakao.maps.Marker({
+                position: location.position
+            });
+
+
+            marker.setMap(map);
+
+
+            var infowindow = new kakao.maps.InfoWindow({
+                content: location.content
+            });
+
+
+            kakao.maps.event.addListener(marker, 'mouseover', function() {
+                infowindow.open(map, marker);
+            });
+
+
+            kakao.maps.event.addListener(marker, 'mouseout', function() {
+                infowindow.close();
+            });
+        });
+    </script>
+
+</body>
+</html>

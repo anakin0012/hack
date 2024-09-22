@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>庆北大学附近的美食推荐</title>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e642a8ca14642fa22cf8d8877543cbaf"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #ad1e1e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #map {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 16px;
+            background-color: #ad1e1e;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #A93226;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color:  #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    庆北大学附近的美食推荐
+</header>
+
+<div id="map"></div>
+
+<div class="container">
+    <h2>探索庆北大学附近的美食</h2>
+    <p>将鼠标悬停在地图上的标记上以查看附近美食的详细信息。</p>
+    <div class="button-container">
+        <a href="http://127.0.0.1:8000/" class="button">主要</a>
+    </div>
+</div>
+
+<footer>
+    © 2024 庆北大学
+</footer>
+
+<script>
+
+    var mapContainer = document.getElementById('map'),
+        mapOption = { 
+            center: new kakao.maps.LatLng(35.888491, 128.610793), 
+            level: 3 
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+    var locations = [
+        {
+            position: new kakao.maps.LatLng(35.8918864299862, 128.60771922615254),
+            content: `
+                <div style="padding:10px;">
+                    <h4>나린찜닭</h4>
+                    <p>北门附近最有名的蒸鸡店。与수탉类似，但在蒸鸡中添加了大饺子，非常独特。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.89416446965368, 128.60970615070948),
+            content: `
+                <div style="padding:10px;">
+                    <h4>고운라멘</h4>
+                    <p>拉面，牛肠盖饭——推荐作为快速解决一餐。如果期待传统的日本拉面，可能会失望。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.893848956645584, 128.6093785946792),
+            content: `
+                <div style="padding:10px;">
+                    <h4>마름모식당</h4>
+                    <p>大家一般点韩牛牛排盖饭或三文鱼盖饭。韩牛盖饭还不错，但三文鱼并不太好。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.89237782021333, 128.61508541883487),
+            content: `
+                <div style="padding:10px;">
+                    <h4>찬누리식당</h4>
+                    <p>典型的家常餐馆。现金支付的话所有餐品都只需5500韩元。烤猪肉和嫩豆腐汤是推荐的菜品，餐后还提供酸奶。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.88372813849927, 128.6099599634957),
+            content: `
+                <div style="padding:10px;">
+                    <h4>터질것같은김밥</h4>
+                    <p>在去东大邱市场的路上。老板夫妇非常亲切，紫菜包饭非常厚。</p>
+                </div>`
+        },
+        {
+            position: new kakao.maps.LatLng(35.8855620916658, 128.61045387699966),
+            content: `
+                <div style="padding:10px;">
+                    <h4>종이밥</h4>
+                    <p>一个简单的杯饭店，适合快速解决一餐。便宜且量足。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.885709129675504, 128.6102409195482),
+            content: `
+                <div style="padding:10px;">
+                    <h4>뽀근닭</h4>
+                    <p>干净美味的蒸鸡。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.8858710794746, 128.61009193656213),
+            content: `
+                <div style="padding:10px;">
+                    <h4>키아누 카페</h4>
+                    <p>最适合学习的地方。东门附近的工科学生大多知道这里。性价比极高。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89607758935579, 128.61353255569645),
+            content: `
+                <div style="padding:10px;">
+                    <h4>또바기 감자탕</h4>
+                    <p>标准的解酒汤。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89440762629188, 128.61038940668772),
+            content: `
+                <div style="padding:10px;">
+                    <h4>돈까스반상</h4>
+                    <p>炸猪排和宴会面条的组合很美味。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89450083176491, 128.61116653259842),
+            content: `
+                <div style="padding:10px;">
+                    <h4>123김밥</h4>
+                    <p>老板非常友好，紫菜包饭非常厚实。让人怀疑他们怎么还能有利润，特别是相比터질것같은김밥。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.894650778924095, 128.61107266672474),
+            content: `
+                <div style="padding:10px;">
+                    <h4>반미리코</h4>
+                    <p>一个非常有名的店，分量非常大。出名的有越南法棍、牛肉米粉、泰式炒河粉和披萨。一定要试试牛肉米粉！</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89451335735333, 128.6105687457796),
+            content: `
+                <div style="padding:10px;">
+                    <h4>미들</h4>
+                    <p>牛肉盖饭、酱油腌虾盖饭和玫瑰意面都很好吃。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89336602872033, 128.60792634234505),
+            content: `
+                <div style="padding:10px;">
+                    <h4>저스트마라관</h4>
+                    <p>这里的麻辣烫味道对我来说太浓了。不过这里看起来是最干净卫生的，配菜种类也很多，所以我经常来。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.8878322216729, 128.61637732136722),
+            content: `
+                <div style="padding:10px;">
+                    <h4>경주식당</h4>
+                    <p>庆大最好的家常餐馆。烤猪肉、味增汤和嫩豆腐汤都很好吃，配菜也非常丰富。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.88401699573498, 128.61025925536296),
+            content: `
+                <div style="padding:10px;">
+                    <h4>집밥풀하우스</h4>
+                    <p>蒸鸡定食非常美味。所有菜品只需6,000韩元。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.89371337746078, 128.60940907414147),
+            content: `
+                <div style="padding:10px;">
+                    <h4>고씨네카레</h4>
+                    <p>非常美味。</p>
+                </div>`
+        }
+        ,
+        {
+            position: new kakao.maps.LatLng(35.893298569250845, 128.60926224336166),
+            content: `
+                <div style="padding:10px;">
+                    <h4>혜화문식당</h4>
+                    <p>提供干净的韩式家常菜。推荐烤猪肉定食和炸鸡定食。他们还提供海带汤。</p>
+                </div>`
+        }
+    ];
+
+
+    locations.forEach(function(location) {
+
+        var marker = new kakao.maps.Marker({
+            position: location.position
+        });
+
+
+        marker.setMap(map);
+
+
+        var infowindow = new kakao.maps.InfoWindow({
+            content: location.content
+        });
+
+
+        kakao.maps.event.addListener(marker, 'mouseover', function() {
+            infowindow.open(map, marker);
+        });
+
+        kakao.maps.event.addListener(marker, 'mouseout', function() {
+            infowindow.close();
+        });
+    });
+</script>
+
+</body>
+</html>

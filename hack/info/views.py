@@ -3,6 +3,15 @@ from django.shortcuts import render
 def Emergency_view(request):
     return render(request, 'emergency-en.html')
 
+def Hospital_view(request):
+    return render(request, 'hospital-en.html')
+
+def Hospital_cn_view(request):
+    return render(request, 'hospital-cn.html')
+
+def Hospital_jp_view(request):
+    return render(request, 'hospital-jp.html')
+
 def Mbank_view(request):
     return render(request, 'Mbank-en.html')
 
