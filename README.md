@@ -14,7 +14,8 @@ SG1I
 - 김건희 : 크롤링 및 벡엔드 담당
 
 ## 시연 영상
-(필수) Youtube 링크
+(필수) Youtube 링크 
+https://youtu.be/uy1tZOAGB6k
 (선택) Github Repository 페이지에서 바로 볼 수 있도록 넣어주셔도 좋습니다.
 
 ## 서비스 소개
